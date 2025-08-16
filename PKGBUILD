@@ -18,6 +18,7 @@ depends=(
 	'swaync'
 	'hyprpaper'
 	'hypridle'
+	'brightnessctl'
 	'rofi'
 	'grim'
 	'slurp'
