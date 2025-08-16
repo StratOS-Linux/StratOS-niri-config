@@ -16,7 +16,7 @@ depends=(
     'ttf-jetbrains-mono'
     'ttf-jetbrains-mono-nerd'
 	'swaync'
-	'swaybg'
+	'hyprpaper'
 	'hypridle'
 	'rofi'
 	'grim'
@@ -30,7 +30,7 @@ optdepends=(
 	'ghostty: alternative terminal emulator to Kitty'
 	'alacritty: blazingly fast terminal emulator written in Rust'
 	"nautilus: GNOME's file manager"
-	'hyprpaper: alternative wallpaper utility'
+	'swaybg: alternative wallpaper utility'
 	'libqalculate: command-line scientific calculator, needed for calc script'
 	'stratos-wallpapers: default wallpapers provided by the StratOS team'
 )

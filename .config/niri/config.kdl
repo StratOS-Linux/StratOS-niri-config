@@ -258,7 +258,7 @@ spawn-at-startup "/usr/lib/xdg-desktop-portal-gnome"
 spawn-at-startup "killall" "nm-applet"
 spawn-at-startup "killall" "blueman-applet"
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/usr/share/backgrounds/magitian/onedark_sound.jpg"
+spawn-at-startup "hyprpaper"
 spawn-at-startup "hypridle"
 spawn-at-startup "eww" "daemon&"
 spawn-at-startup "eww" "open-many" "sys1" "sys2" "uptime" "powermenu"
@@ -619,7 +619,7 @@ layer-rule {
 }
 
 layer-rule {
-	match namespace="^wallpaper$"
+	match namespace="^hyprpaper$"
 	place-within-backdrop false
 }
 
