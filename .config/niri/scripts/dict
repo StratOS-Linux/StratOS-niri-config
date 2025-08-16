@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+word=$(wl-paste --primary)
+cap_word=$(echo $word | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
+
+query=$(curl -s "https://api.dictionaryapi.dev/api/v2/entries/en/$word")
+
+[ -z "$query" ] && notify-send -h string:bgcolor:"#e06c75" -h string:fgcolor:"#282c34" "Invalid word." && exit 0
+
+def=$(echo "$query" | jq -r '.[0].meanings[] | "\(.partOfSpeech): \(.definitions[0].definition)"')
+
+
+notify-send "$cap_word" "$def"

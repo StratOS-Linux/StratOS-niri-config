@@ -1,0 +1,5 @@
+#!/bin/env bash
+pkill waybar
+waybar &
+sleep 1
+notify-send "Reloaded Waybar" --app-name "Waybar" -i $HOME/.scripts/svgs/system-reboot.svg

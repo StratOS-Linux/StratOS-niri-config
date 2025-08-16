@@ -1,0 +1,4 @@
+#!/bin/env bash
+pkill ags
+ags
+# notify-send "Reloaded AGS" -i $HOME/.scripts/svgs/system-reboot.svg

@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+source ~/.virtualenvs/ranger/bin/activate
+kitty -e ranger

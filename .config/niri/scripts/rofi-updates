@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# selected_option=$(checkupdates --nocolor | /sbin/rofi -dmenu -p "Updates:" -theme ~/.config/rofi/powermenu/type-1/style-1.rasi)
+
+# if [[ "$selected_option" != "" ]]; then
+#     # sudo pacman -Syu
+# 	kitty -e pkexec pacman -Syu --noconfirm && pkill -SIGRTMIN+8 waybar && notify-send "Updated successfully." -i $HOME/.scripts/svgs/archlinux.svg 
+# fi
+
+available_updates=$(checkupdates --nocolor)
+no_updates=$(echo "$available_updates" | wc -l)
+
+if [[ -z "$available_updates" ]]; then
+    notify-send "No updates available" -i $HOME/.scripts/svgs/archlinux.svg
+    exit 0
+fi
+
+selected_option=$(echo "$available_updates" | /sbin/rofi -dmenu -p "$no_updates updates available:" -theme ~/.config/rofi/powermenu/type-1/style-1.rasi)
+
+if [[ "$selected_option" != "" ]]; then
+    # Run the update and notify upon success
+    ghostty -e pkexec pacman -Syu --noconfirm && pkill -SIGRTMIN+8 waybar && notify-send "Updated successfully." -i $HOME/.scripts/svgs/archlinux.svg
+fi

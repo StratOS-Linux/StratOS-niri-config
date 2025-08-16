@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+input=$(command rofi -dmenu -p "Calculate: " -theme-str "listview { enabled: false; }") || input=""
+if [ -z "$input" ]; then
+	exit
+else
+	output=$(qalc -t $input)
+	notify-send "Qalc" "$output" --icon ~/.scripts/qalculate.png
+	wl-copy $output
+fi

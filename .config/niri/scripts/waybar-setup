@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+wm=$(echo "$XDG_CURRENT_DESKTOP" | tr '[:upper:]' '[:lower:]' | xargs)
+
+case "$wm" in
+	"niri")
+		sed -i 's/hyprland/niri/g' ~/.config/waybar/config 
+		;;
+	"hyprland")
+		sed -i 's/niri/hyprland/g' ~/.config/waybar/config
+		;;
+	*)
+		echo "Invalid WM detected." $wm
+		;;
+esac

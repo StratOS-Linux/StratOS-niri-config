@@ -1,0 +1,10 @@
+#!/bin/env bash
+
+# if [[ $(checkupdates | wc -l) == "1" ]]; then
+	# echo "1 update"
+if [[ $(checkupdates | wc -l) == "0" ]]; then
+	echo "Up-to-date "
+else
+	echo "$(checkupdates | wc -l) "
+	# echo "$(checkupdates | wc -l) updates"
+fi

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+wl-paste >> ~/.cache/clip_history
+truncate -s -1 ~/.cache/clip_history
+echo -e '' >> ~/.cache/clip_history 
+
+if [[ $1 == '--clear' ]]; then
+   wl-copy --clear
+   echo > ~/.cache/clip_history
+   notify-send "Cleared clipboard." -i ~/.scripts/svgs/clipboard.svg 
+fi
+   

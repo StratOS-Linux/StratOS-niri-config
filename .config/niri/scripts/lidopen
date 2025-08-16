@@ -1,0 +1,13 @@
+#!/bin/env sh
+# pidof hyprlock || hyprlock; # managed by Hyprland switches
+pidof hypridle || hypridle;
+brightnessctl set 10%;
+eww daemon;
+eww open-many sys1 sys2 uptime powermenu;
+powerprofilesctl set balanced;
+emacs --daemon;
+# waybar
+# pidof hyprlock || hyprlock
+nmcli networking on;
+# pidof hyprlock || hyprlock
+notify-send "Welcome back!" -i ~/.scripts/svgs/archlinux.svg;

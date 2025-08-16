@@ -1,0 +1,13 @@
+#!/bin/env sh
+# hyprctl dispatch dpms off
+brightnessctl set 0%
+nmcli networking off
+killall eww &
+killall hypridle &
+# killall waybar - due to idle inhibitor
+killall emacs &
+powerprofilesctl set power-saver
+# pidof hyprlock || hyprlock & disown && sleep 1;
+# systemctl suspend # requires suspend to work - ~/.scripts/disable-usb-wakeup.service
+# SUSPEND HANDLED BY /etc/systemd/logind.conf 
+# hyprlock

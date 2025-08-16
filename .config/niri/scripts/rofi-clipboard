@@ -1,0 +1,3 @@
+host=$(hostnamectl hostname)
+txt=$(command tac ~/.cache/clip_history | command rofi -dmenu -p "$host" -mesg "Clipboard:" -theme ~/.config/rofi/powermenu/type-1/style-1.rasi)
+wl-copy $txt

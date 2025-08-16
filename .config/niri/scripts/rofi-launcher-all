@@ -1,0 +1,2 @@
+#!/bin/env bash
+exec rofi -disable-history -show combi -theme ~/.config/rofi/config.rasi -auto-select
