@@ -349,7 +349,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return { spawn "kitty"; }
+    Mod+Return { spawn "ghostty"; }
     Mod+Shift+Return { spawn "emacsclient" "-nc" "-a" "emacs"; }
     Mod+R { spawn "~/.config/niri/scripts/rofi-launcher"; }
     Mod+E { spawn "nautilus"; } // comes with GNOME xdg portal for free ;)
