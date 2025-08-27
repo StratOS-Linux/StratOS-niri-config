@@ -5,6 +5,7 @@ pkgrel=2
 pkgdesc="Niri configuration for StratOS"
 arch=('any')
 license=('GPL3')
+conflicts=('stratos-hyprland-config')
 depends=(
     'bluez-utils'
     'niri'
@@ -19,6 +20,8 @@ depends=(
     'rofi'
     'grim'
     'slurp'
+    'stratos-wallpapers'
+    'stratos-waybar-niri-config'
     'swappy'
     'wl-clipboard'
     'xwayland-satellite'
@@ -30,8 +33,6 @@ optdepends=(
     "nautilus: GNOME's file manager"
     'swaybg: alternative wallpaper utility'
     'libqalculate: command-line scientific calculator, needed for calc script'
-    'stratos-wallpapers: default wallpapers provided by the StratOS team'
-    'stratos-waybar-niri-config: Niri waybar config'
     'stratos-kitty-config: kitty config'
     'stratos-eww-config: eww config'
 )
@@ -46,4 +47,5 @@ prepare() {
 package() {
     install -d "$pkgdir/etc/skel/.config"
     cp -r "$srcdir/.config/niri/" "$pkgdir/etc/skel/.config/"
+    cp -r "$srcdir/.config/hypr/" "$pkgdir/etc/skel/.config/"
 }
