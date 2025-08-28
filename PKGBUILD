@@ -1,7 +1,7 @@
 # Maintainer: @magitian <magitian@duck.com>
 pkgname=stratos-niri-config
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Niri configuration for StratOS"
 arch=('any')
 license=('GPL3')
