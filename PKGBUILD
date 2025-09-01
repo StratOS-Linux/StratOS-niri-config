@@ -1,29 +1,30 @@
 # Maintainer: @magitian <magitian@duck.com>
 pkgname=stratos-niri-config
 pkgver=1.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Niri configuration for StratOS"
 arch=('any')
 license=('GPL3')
 conflicts=('stratos-hyprland-config')
 depends=(
+    'brightnessctl'
     'bluez-utils'
-    'niri'
-    'libpulse'
-    'xdg-desktop-portal-gnome'
-    'ttf-jetbrains-mono'
-    'ttf-jetbrains-mono-nerd'
-    'swaync'
+    'grim'
     'hyprpaper'
     'hypridle'
-    'brightnessctl'
+    'niri'
     'rofi'
-    'grim'
     'slurp'
     'stratos-wallpapers'
     'stratos-waybar-niri-config'
+    'swaync'
+	'swayosd'
     'swappy'
+    'ttf-jetbrains-mono'
+    'ttf-jetbrains-mono-nerd'
     'wl-clipboard'
+    'xdg-desktop-portal-gnome'
+	'xorg-xwayland'
     'xwayland-satellite'
 )
 
