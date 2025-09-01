@@ -1,7 +1,7 @@
 # Maintainer: @magitian <magitian@duck.com>
 pkgname=stratos-niri-config
 pkgver=1.0
-pkgrel=5
+pkgrel=6
 pkgdesc="Niri configuration for StratOS"
 arch=('any')
 license=('GPL3')
@@ -48,6 +48,6 @@ prepare() {
 package() {
     install -d "$pkgdir/etc/skel/.config/niri"
     install -d "$pkgdir/etc/skel/.config/hypr"
-    cp -r "$srcdir/.config/niri/*" "$pkgdir/etc/skel/.config/niri/"
-    cp -r "$srcdir/.config/hypr/*" "$pkgdir/etc/skel/.config/hypr/"
+    cp -r "$srcdir/niri/*" "$pkgdir/etc/skel/.config/niri/"
+    cp -r "$srcdir/hypr/*" "$pkgdir/etc/skel/.config/hypr/"
 }
