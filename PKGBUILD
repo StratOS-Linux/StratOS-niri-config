@@ -46,7 +46,8 @@ prepare() {
 }
 
 package() {
-    install -d "$pkgdir/etc/skel/.config/"
-    cp -r "$srcdir/.config/niri/" "$pkgdir/etc/skel/.config/"
-    cp -r "$srcdir/.config/hypr/" "$pkgdir/etc/skel/.config/"
+    install -d "$pkgdir/etc/skel/.config/niri"
+    install -d "$pkgdir/etc/skel/.config/hypr"
+    cp -r "$srcdir/.config/niri/*" "$pkgdir/etc/skel/.config/niri/"
+    cp -r "$srcdir/.config/hypr/*" "$pkgdir/etc/skel/.config/hypr/"
 }
