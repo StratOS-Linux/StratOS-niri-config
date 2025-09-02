@@ -1,7 +1,7 @@
 # Maintainer: @magitian <magitian@duck.com>
 pkgname=stratos-niri-config
 pkgver=1.0
-pkgrel=7
+pkgrel=8
 pkgdesc="Niri configuration for StratOS"
 arch=('any')
 license=('GPL3')
@@ -13,7 +13,7 @@ depends=(
     'hyprpaper'
     'hypridle'
     'niri'
-    'rofi'
+    'rofi-wayland'
     'slurp'
     'stratos-wallpapers'
     'stratos-waybar-niri-config'
