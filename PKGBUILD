@@ -1,12 +1,13 @@
 # Maintainer: @magitian <magitian@duck.com>
 pkgname=stratos-niri-config
 pkgver=1.1
-pkgrel=3
+pkgrel=4
 pkgdesc="Niri configuration for StratOS"
 arch=('any')
 license=('GPL3')
 conflicts=('stratos-hyprland-config')
 depends=(
+	'bibata-cursor-theme-bin'
     'brightnessctl'
     'bluez-utils'
     'grim'
