@@ -253,6 +253,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // spawn-at-startup "alacritty" "-e" "fish"
+spawn-at-startup "sudo" "-E" "calamares" "-D8"
 spawn-at-startup "/usr/local/bin/StratOS-configure-ubuntu" // will not launch anyways after installation.
 spawn-at-startup "xwayland-satellite"
 // spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "Nordic"
