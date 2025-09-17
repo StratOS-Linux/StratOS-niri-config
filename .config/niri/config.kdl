@@ -256,6 +256,7 @@ layout {
 spawn-at-startup "sudo" "-E" "calamares" "-D8"
 spawn-at-startup "/usr/local/bin/StratOS-configure-ubuntu" // will not launch anyways after installation.
 spawn-at-startup "xwayland-satellite"
+gsettings set org.gnome.desktop.interface icon-theme "Tokyonight-Moon"
 // spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "Nordic"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "killall" "xdg-desktop-por"
@@ -615,7 +616,7 @@ hotkey-overlay {
 // Environment variables
 environment {
 	// DISPLAY ":0" // removes Xwayland issues in VMs
-	GTK_THEME "Nordic"
+	GTK_THEME "Tokyonight-Dark-B"
 }
 
 // Layer rules
@@ -633,3 +634,9 @@ layer-rule {
 	// match namespace="^wallpaper$"
 	// place-within-backdrop true
 // }
+
+// Cursor theme
+cursor {
+	xcursor-theme "Bibata-Modern-Ice"
+	xcursor-size 36
+}
