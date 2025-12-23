@@ -19,7 +19,7 @@ depends=(
     'stratos-wallpapers'
     'stratos-waybar-config'
     'swaync'
-	'swayosd'
+	'swayosd-git'
     'swappy'
     'ttf-jetbrains-mono'
     'ttf-jetbrains-mono-nerd'
