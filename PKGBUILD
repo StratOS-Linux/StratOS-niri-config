@@ -1,7 +1,7 @@
 # Maintainer: @magitian <magitian@duck.com>
 pkgname=stratos-niri-config
 pkgver=1.2
-pkgrel=0
+pkgrel=1
 pkgdesc="Niri configuration for StratOS"
 arch=('any')
 license=('GPL3')
@@ -10,6 +10,7 @@ depends=(
 	'bibata-cursor-theme-bin'
     'brightnessctl'
     'bluez-utils'
+	'fuzzel'
     'grim'
     'hyprpaper'
     'hypridle'
@@ -19,7 +20,7 @@ depends=(
     'stratos-wallpapers'
     'stratos-waybar-config'
     'swaync'
-	'swayosd-git'
+	'swayosd'
     'swappy'
     'ttf-jetbrains-mono'
     'ttf-jetbrains-mono-nerd'
